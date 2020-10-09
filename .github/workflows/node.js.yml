@@ -1,0 +1,35 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 13 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 14.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm start
+    - name: Git commit
+      run: |
+          git config user.name ${{ secrets.USERNAME }}
+          git config user.email ${{ secrets.EMAIL_GMAIL }}
+          git add README.md
+          git commit -m "Update README"
+          git push origin master
+    env:
+      EMAIL_GMAIL: ${{ secrets.EMAIL_GMAIL }}
+      USERNAME: ${{ secrets.USERNAME }}
