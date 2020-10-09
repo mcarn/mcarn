@@ -1,0 +1,22 @@
+{
+  "name": "mcarn",
+  "version": "1.0.0",
+  "description": "README page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcarn/mcarn.git"
+  },
+  "keywords": [
+    "mcarn"
+  ],
+  "author": "mcarn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcarn/mcarn/issues"
+  },
+  "homepage": "https://github.com/mcarn/mcarn#readme"
+}
