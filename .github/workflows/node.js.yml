@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Readme CI
 
 on:
   workflow_dispatch:
@@ -29,7 +29,11 @@ jobs:
       run : npm run test
     - name : Format
       run: npm run prebuild 
+    - name: Check for modified files
+      id: git-check
+      run: echo ::set-output name=modified::$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)
     - name: Git commit
+      if: steps.git-check.outputs.modified == 'true'
       run: |
           git config user.name ${{ secrets.USERNAME }}
           git config user.email ${{ secrets.EMAIL_GMAIL }}
