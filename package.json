@@ -27,11 +27,11 @@
   "homepage": "https://github.com/mcarn/mcarn#readme",
   "devDependencies": {
     "nodemon": "^2.0.4",
-    "ts-node": "^9.0.0"
   },
   "dependencies": {
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.8",
+    "ts-node": "^9.0.0"
     "jest": "^26.5.2",
     "ts-jest": "^26.4.1",
     "tslint": "^6.1.3",
