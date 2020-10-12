@@ -6,9 +6,9 @@ name: Readme CI
 on:
   workflow_dispatch:
   schedule:
-    - cron: "05 18 * * *"
-    - cron: "05 12 * * *"
-    - cron: "05 8 * * *"
+    - cron: "5 18 * * *"
+    - cron: "5 12 * * *"
+    - cron: "5 8 * * *"
 
 jobs:
   build:
