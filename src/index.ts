@@ -1,13 +1,13 @@
-import * as fs from "fs";
-import * as path from "path";
-import { getGreeting, replaceReadme } from "./utils";
+// import * as fs from "fs";
+// import * as path from "path";
+// import { getGreeting, replaceReadme } from "./utils";
 
-const date: Date = new Date();
+// const date: Date = new Date();
 
-const readme = fs.readFileSync(path.join(__dirname, "../README.md"), "utf8");
+// const readme = fs.readFileSync(path.join(__dirname, "../README.md"), "utf8");
 
-let newReadme = replaceReadme(date, readme);
+// let newReadme = replaceReadme(date, readme);
 
-newReadme = getGreeting(date, newReadme);
+// newReadme = getGreeting(date, newReadme);
 
-fs.writeFileSync(path.join(__dirname, "../README.md"), newReadme);
+// fs.writeFileSync(path.join(__dirname, "../README.md"), newReadme);
