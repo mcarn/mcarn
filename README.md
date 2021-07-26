@@ -1,5 +1,5 @@
 [![Linkedin](https://img.shields.io/badge/linkedin-mcarn-%230177B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/mcarneirom/)
-
+![Twitter Follow](https://img.shields.io/twitter/follow/mcarnDev?style=social)
 <!--
 **mcarn/mcarn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
